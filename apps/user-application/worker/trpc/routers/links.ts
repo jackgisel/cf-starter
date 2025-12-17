@@ -9,6 +9,7 @@ import {
   getLink,
   getLinks,
   updateLinkName,
+  updateLinkDestinations,
 } from "@repo/data-ops/queries/links";
 
 import { TRPCError } from "@trpc/server";
