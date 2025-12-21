@@ -11,4 +11,32 @@
 	"observability": {
 		"enabled": true,
 	},
+	"d1_databases": [
+		{
+			"binding": "db",
+			"database_id": "cae2126a-4578-414b-bbb7-24cbae706b73",
+			"remote": true,
+		},
+	],
+	"kv_namespaces": [
+		{
+			"binding": "cache",
+			"id": "a77d44f30bdc4e1a91d1cde6e35853c7",
+			"preview_id": "a77d44f30bdc4e1a91d1cde6e35853c7",
+			"remote": true,
+		},
+	],
+	"queues": {
+		"consumers": [
+			{
+				"queue": "smartlinks-queue-staging",
+			},
+		],
+		"producers": [
+			{
+				"binding": "queue",
+				"queue": "smartlinks-queue-staging",
+			},
+		],
+	},
 }
