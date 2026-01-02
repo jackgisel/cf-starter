@@ -2,7 +2,8 @@ import { WorkerEntrypoint } from 'cloudflare:workers';
 import { App as HonoApp } from './hono/app';
 import { initDatabase } from '@repo/data-ops/database';
 import { QueueMessageSchema } from '@repo/data-ops/zod-schema/queue';
-import { handleLinkClick } from './queueHandlers/linkClicksHandler';
+import { handleLinkClick } from './queue-handlers/link-click-handler';
+export { DestinationEvaluationWorkflow } from './workflows/destination-evaluation-workflow';
 
 export default class DataService extends WorkerEntrypoint<Env> {
 	constructor(ctx: ExecutionContext, env: Env) {
@@ -12,7 +13,7 @@ export default class DataService extends WorkerEntrypoint<Env> {
 
 	fetch(request: Request) {
 		return HonoApp.fetch(request, this.env, this.ctx);
-	}
+	}	
 
 	async queue(batch: MessageBatch<unknown>) {
 		for (const message of batch.messages) {

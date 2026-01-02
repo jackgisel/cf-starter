@@ -11,6 +11,12 @@
 	"observability": {
 		"enabled": true,
 	},
+	"ai": {
+		"binding": "AI",
+	},
+	"browser": {
+		"binding": "virtualBrowser",
+	},
 	"d1_databases": [
 		{
 			"binding": "db",
@@ -39,4 +45,9 @@
 			},
 		],
 	},
+	"workflows": [{
+		"binding": "destinationEvaluationWorkflow",
+		"name": "destination-evaluation-workflow",
+		"class_name": "DestinationEvaluationWorkflow",
+	}],
 }
