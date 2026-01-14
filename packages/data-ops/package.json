@@ -23,6 +23,10 @@
       "types": "./dist/zod/*.d.ts",
       "default": "./dist/zod/*.js"
     },
+    "./plaid/*": {
+      "types": "./dist/plaid/*.d.ts",
+      "default": "./dist/plaid/*.js"
+    },
     "./durable-objects-helpers": {
       "types": "./dist/durable-objects-helpers/*.d.ts",
       "default": "./dist/durable-objects-helpers/*.js"
@@ -43,6 +47,7 @@
     "kysely": "^0.28.2",
     "kysely-d1": "^0.4.0",
     "nanoid": "^5.1.5",
+    "plaid": "^41.0.0",
     "stripe": "^18.4.0",
     "uuid": "^11.1.0",
     "zod": "^3.25.67"
